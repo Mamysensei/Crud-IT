@@ -9,6 +9,7 @@
 <title>Ecran de gestion des légumes</title>
 </head>
 <body>
+<h1>Bienvenue sur CRUD'IT</h1>
 	<div align="center">
 		<h1>Liste des crudités disponibles</h1>
 		<table border="1">
