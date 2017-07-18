@@ -1,0 +1,50 @@
+package com.jwt.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.jwt.dao.CruditeDAO;
+import com.jwt.model.Crudite;
+
+@Service
+@Transactional
+public class CruditeServiceImpl implements CruditeService {
+
+	@Autowired
+	private CruditeDAO cruditeDAO;
+
+	@Override
+	@Transactional
+	public void addCrudite(Crudite crudite) {
+		cruditeDAO.addCrudite(crudite);
+	}
+
+	@Override
+	@Transactional
+	public List<Crudite> getAllCrudite() {
+		return cruditeDAO.getAllCrudite();
+	}
+
+	@Override
+	@Transactional
+	public void deleteCrudite(Integer crudId) {
+		cruditeDAO.deleteCrudite(crudId);
+	}
+
+	public Crudite getCrudite(int crudid) {
+		return cruditeDAO.getCrudite(crudid);
+	}
+
+	public Crudite updateEmployee(Crudite crudite) {
+		// TODO Auto-generated method stub
+		return cruditeDAO.updateCrudite(crudite);
+	}
+
+	public void setCruditeDAO(CruditeDAO cruditeDAO) {
+		this.cruditeDAO = cruditeDAO;
+	}
+
+}

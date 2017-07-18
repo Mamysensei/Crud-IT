@@ -1,0 +1,51 @@
+package com.jwt.dao;
+ 
+import java.util.List;
+ 
+import org.hibernate.SessionFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.jwt.model.Crudite;
+import com.jwt.model.Employee;
+ 
+@Repository
+public class CruditeDAOImpl implements CruditeDAO {
+ 
+    @Autowired
+    private SessionFactory sessionFactory;
+ 
+    public void addCrudite(Crudite crudite) {
+        sessionFactory.getCurrentSession().saveOrUpdate(crudite);
+ 
+    }
+ 
+    @SuppressWarnings("unchecked")
+    public List<Crudite> getAllEmployees() {
+ 
+        return sessionFactory.getCurrentSession().createQuery("from Crudite")
+                .list();
+    }
+ 
+    @Override
+    public void deleteCrudite(Integer employeeId) {
+    	Crudite crudite = (Crudite) sessionFactory.getCurrentSession().load(
+    			Crudite.class, employeeId);
+        if (null != crudite) {
+            this.sessionFactory.getCurrentSession().delete(crudite);
+        }
+ 
+    }
+ 
+    public Crudite getCrudite(int empid) {
+        return (Crudite) sessionFactory.getCurrentSession().get(
+        		Crudite.class, empid);
+    }
+ 
+    @Override
+    public Crudite updateCrudite(Crudite crudite) {
+        sessionFactory.getCurrentSession().update(crudite);
+        return crudite;
+    }
+ 
+}

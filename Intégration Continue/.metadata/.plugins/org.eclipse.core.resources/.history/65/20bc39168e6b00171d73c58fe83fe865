@@ -1,0 +1,18 @@
+package com.jwt.service;
+
+import java.util.List;
+
+import com.jwt.model.Crudite;
+
+public interface EmployeeService {
+	
+	public void addEmployee(Crudite employee);
+
+	public List<Crudite> getAllEmployees();
+
+	public void deleteEmployee(Integer employeeId);
+
+	public Crudite getEmployee(int employeeid);
+
+	public Crudite updateEmployee(Crudite employee);
+}

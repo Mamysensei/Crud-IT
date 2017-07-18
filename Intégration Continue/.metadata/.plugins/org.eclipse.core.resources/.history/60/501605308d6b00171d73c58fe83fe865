@@ -1,0 +1,17 @@
+package com.jwt.dao;
+
+import java.util.List;
+import com.jwt.model.Crudite;
+
+public interface CruditeDAO {
+
+	public void addCrudite(Crudite employee);
+
+	public List<Crudite> getAllEmployees();
+
+	public void deleteEmployee(Integer employeeId);
+
+	public Crudite updateEmployee(Crudite employee);
+
+	public Crudite getEmployee(int employeeid);
+}
