@@ -9,7 +9,6 @@
 <title>Ajout ou modification d'une crudité</title>
 </head>
 <body>
-	<h1>Bienvenue sur CRUD'IT</h1>
     <div align="center">
         <h1>Ajout ou modification d'une crudité</h1>
         <form:form action="saveCrudite" method="post" modelAttribute="crudite">

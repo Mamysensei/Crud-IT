@@ -58,3 +58,8 @@
 0:0:0:0:0:0:0:1 - - [18/Jul/2017:11:21:29 +0200] "GET /SpringMVCHibernateCRUD/newCrudite HTTP/1.1" 200 1157
 0:0:0:0:0:0:0:1 - - [18/Jul/2017:11:21:37 +0200] "POST /SpringMVCHibernateCRUD/saveCrudite HTTP/1.1" 302 -
 0:0:0:0:0:0:0:1 - - [18/Jul/2017:11:21:37 +0200] "GET /SpringMVCHibernateCRUD/ HTTP/1.1" 200 772
+127.0.0.1 - - [18/Jul/2017:11:34:16 +0200] "GET / HTTP/1.1" 404 990
+0:0:0:0:0:0:0:1 - - [18/Jul/2017:11:34:20 +0200] "GET /SpringMVCHibernateCRUD/ HTTP/1.1" 200 772
+0:0:0:0:0:0:0:1 - - [18/Jul/2017:11:35:14 +0200] "GET / HTTP/1.1" 404 990
+0:0:0:0:0:0:0:1 - - [18/Jul/2017:11:35:15 +0200] "GET /SpringMVCHibernateCRUD/ HTTP/1.1" 200 772
+0:0:0:0:0:0:0:1 - - [18/Jul/2017:11:35:22 +0200] "GET /SpringMVCHibernateCRUD/editCrudite?id=4 HTTP/1.1" 200 1196
